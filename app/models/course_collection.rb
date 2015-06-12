@@ -1,6 +1,6 @@
 class CourseCollection < CuratedCollection
   include WithNestedMembers
-  include CreatedByTrove
+  include CreatedByWhichApp
 
   after_create :add_to_root_collection
 

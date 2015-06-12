@@ -9,7 +9,7 @@ module WithValidDisplays
 
     def displays_valid
       return unless displays.present?
-      unless displays.all? {|d| %w(dl tisch perseus elections dark trove nowhere).include? d }
+      unless displays.all? {|d| %w(dl tisch perseus elections dark trove greatcourses nowhere).include? d }
         errors.add(:displays, "must include at least one valid entry")
       end
     end

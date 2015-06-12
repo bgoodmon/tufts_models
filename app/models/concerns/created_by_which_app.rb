@@ -1,4 +1,4 @@
-module CreatedByTrove
+module CreatedByWhichApp
   extend ActiveSupport::Concern
 
   included do
@@ -7,6 +7,6 @@ module CreatedByTrove
 
   protected
     def add_created_by
-      self.createdby ||= 'trove'
+      self.createdby ||= Settings.created_by
     end
 end

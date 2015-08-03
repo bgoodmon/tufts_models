@@ -33,6 +33,12 @@ class LocalPathService
     end
   end
 
+  # class method for om datastreams - the caller is a datastream rather than a model
+  # that has a datastream.
+  def self.local_datastream_path(datastream)
+    datastream.dsLocation.sub(Settings.trim_bucket_url, Settings.object_store_root)
+  end
+
   private
 
     def remote_root

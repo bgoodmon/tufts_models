@@ -1,6 +1,10 @@
 # For parsing the TuftsVideo TEI transcript xml
 
-  class TuftsTeiMeta < TuftsDatastream
+require "om"
+
+  class TuftsTeiMeta
+
+  include OM::XML::Document
 
     set_terminology do |t|
       t.root(:path => "TEI.2", :namespace_prefix => nil, :xmlns => "", :schema => "http://dca.tufts.edu/schema/tei/tei2.dtd")

@@ -5,7 +5,6 @@ class TuftsVideo < TuftsBase
   has_file_datastream 'Thumbnail.png', control_group: 'E', versionable: false
   has_file_datastream 'Access.webm', control_group: 'E', versionable: false
   has_file_datastream 'Access.mp4', control_group: 'E', versionable: false
-  has_metadata "ARCHIVAL_XML", type: TuftsTeiMeta
 
   # @param [String] dsid Datastream id
   # @param [String] type the content type to test
